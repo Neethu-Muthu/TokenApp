@@ -256,7 +256,30 @@ const CommissionerPage = () => {
         {electionData && (
           <div className="mt-10 p-4 border rounded shadow max-w-xl w-full">
             <h3 className="text-2xl font-semibold mb-4">Election Data</h3>
-            <pre>{JSON.stringify(electionData, null, 2)}</pre>
+            <div>
+              <p>
+                <strong>Commissioner Name:</strong>{" "}
+                {electionData.commissionerName}
+              </p>
+              <p>
+                <strong>Election Name:</strong> {electionData.electionName}
+              </p>
+              <p>
+                <strong>Election ID:</strong> {electionData.electionId}
+              </p>
+              <p>
+                <strong>Description:</strong> {electionData.description}
+              </p>
+              <p>
+                <strong>Start Date:</strong> {electionData.startDate}
+              </p>
+              <p>
+                <strong>End Date:</strong> {electionData.endDate}
+              </p>
+              <p>
+                <strong>Status:</strong> {electionData.status}
+              </p>
+            </div>
           </div>
         )}
       </section>
