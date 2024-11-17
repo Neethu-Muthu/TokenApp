@@ -284,5 +284,43 @@ router.post("/verify-candidate", async (req, res) => {
     });
   }
 });
+router.post("/complete-candidate-verification", async (req, res) => {
+  try {
+    const { electionId } = req.body;
 
+    if (!electionId) {
+      return res.status(400).json({
+        success: false,
+        message: "All fields are required",
+      });
+    }
+
+    let userClient = new clientApplication();
+
+    const result = await userClient.submitTxn(
+      "voterRegistrationAuthority",
+      "votingchannel",
+      "vote-contract",
+      "VotingContract",
+      "invokeTxn",
+      "",
+      "completeCandidateVerification",
+
+      electionId
+    );
+
+    res.status(201).json({
+      success: true,
+      message: "Candidate Verification Completed!",
+      data: { result },
+    });
+  } catch (error) {
+    console.error("Error completing the verification :", error);
+    res.status(500).json({
+      success: false,
+      message: "Please check the ID!",
+      data: { error: error.message },
+    });
+  }
+});
 module.exports = router;
