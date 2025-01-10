@@ -1,55 +1,29 @@
 let profile = {
-  commissioner: {
+  org1: {
     cryptoPath:
-      "../../Fabric-network-Voting/organizations/peerOrganizations/commissioner.voting.com",
+      "/home/neethu/CHF/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com",
     keyDirectoryPath:
-      "../../Fabric-network-Voting/organizations/peerOrganizations/commissioner.voting.com/users/User1@commissioner.voting.com/msp/keystore/",
+      "/home/neethu/CHF/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore",
     certPath:
-      "../../Fabric-network-Voting/organizations/peerOrganizations/commissioner.voting.com/users/User1@commissioner.voting.com/msp/signcerts/cert.pem",
+      "/home/neethu/CHF/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/cert.pem",
     tlsCertPath:
-      "../../Fabric-network-Voting/organizations/peerOrganizations/commissioner.voting.com/peers/peer0.commissioner.voting.com/tls/ca.crt",
+      "/home/neethu/CHF/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt",
     peerEndpoint: "localhost:7051",
-    peerHostAlias: "peer0.commissioner.voting.com",
-    mspId: "commissionerMSP",
+    peerHostAlias: "peer0.org1.example.com",
+    mspId: "Org1MSP",
   },
-  voterRegistrationAuthority: {
+  org2: {
     cryptoPath:
-      "../../Fabric-network-Voting/organizations/peerOrganizations/voterRegistrationAuthority.voting.com",
+      "/home/neethu/CHF/fabric-samples/test-network/organizations/peerOrganizations/org2.example.com",
     keyDirectoryPath:
-      "../../Fabric-network-Voting/organizations/peerOrganizations/voterRegistrationAuthority.voting.com/users/User1@voterRegistrationAuthority.voting.com/msp/keystore/",
+      "/home/neethu/CHF/fabric-samples/test-network/organizations/peerOrganizations/org2.example.com/users/User1@org2.example.com/msp/keystore",
     certPath:
-      "../../Fabric-network-Voting/organizations/peerOrganizations/voterRegistrationAuthority.voting.com/users/User1@voterRegistrationAuthority.voting.com/msp/signcerts/cert.pem",
+      "/home/neethu/CHF/fabric-samples/test-network/organizations/peerOrganizations/org2.example.com/users/User1@org2.example.com/msp/signcerts/cert.pem",
     tlsCertPath:
-      "../../Fabric-network-Voting/organizations/peerOrganizations/voterRegistrationAuthority.voting.com/peers/peer0.voterRegistrationAuthority.voting.com/tls/ca.crt",
-    peerEndpoint: "localhost:8051",
-    peerHostAlias: "peer0.voterRegistrationAuthority.voting.com",
-    mspId: "voterRegistrationAuthorityMSP",
-  },
-  votingBooth: {
-    cryptoPath:
-      "../../Fabric-network-Voting/organizations/peerOrganizations/votingBooth.voting.com",
-    keyDirectoryPath:
-      "../../Fabric-network-Voting/organizations/peerOrganizations/votingBooth.voting.com/users/User1@votingBooth.voting.com/msp/keystore/",
-    certPath:
-      "../../Fabric-network-Voting/organizations/peerOrganizations/votingBooth.voting.com/users/User1@votingBooth.voting.com/msp/signcerts/cert.pem",
-    tlsCertPath:
-      "../../Fabric-network-Voting/organizations/peerOrganizations/votingBooth.voting.com/peers/peer0.votingBooth.voting.com/tls/ca.crt",
+      "/home/neethu/CHF/fabric-samples/test-network/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt",
     peerEndpoint: "localhost:9051",
-    peerHostAlias: "peer0.votingBooth.voting.com",
-    mspId: "votingBoothMSP",
-  },
-  auditor: {
-    cryptoPath:
-      "../../Fabric-network-Voting/organizations/peerOrganizations/auditor.voting.com",
-    keyDirectoryPath:
-      "../../Fabric-network-Voting/organizations/peerOrganizations/auditor.voting.com/users/User1@auditor.voting.com/msp/keystore/",
-    certPath:
-      "../../Fabric-network-Voting/organizations/peerOrganizations/auditor.voting.com/users/User1@auditor.voting.com/msp/signcerts/cert.pem",
-    tlsCertPath:
-      "../../Fabric-network-Voting/organizations/peerOrganizations/auditor.voting.com/peers/peer0.auditor.voting.com/tls/ca.crt",
-    peerEndpoint: "localhost:11051",
-    peerHostAlias: "peer0.auditor.voting.com",
-    mspId: "auditorMSP",
+    peerHostAlias: "peer0.org2.example.com",
+    mspId: "Org2MSP",
   },
 };
 module.exports = { profile };

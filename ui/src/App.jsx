@@ -4,27 +4,22 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useNavigate,
+  // useNavigate,
 } from "react-router-dom";
 import HomePage from "./components/HomePage";
-import CommissionerPage from "./components/CommissionerPage";
-import VoterRegistrationAuthorityPage from "./components/VoterRegistrationAuthorityPage";
-import AuditorPage from "./components/AuditorPage";
+import NftSeller from "./components/NftSeller";
+import NFTBuyerPage from "./components/NftBuyer";
 
-import VotingBooth from "./components/VotingBooth";
+;
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/commissioner" element={<CommissionerPage />} />
-        <Route
-          path="/voter-registration-authority"
-          element={<VoterRegistrationAuthorityPage />}
-        />
-        <Route path="/auditor" element={<AuditorPage />} />
-        <Route path="/voting-booth" element={<VotingBooth />} />
+        <Route path="/nft-seller" element={<NftSeller />} />
+
+        <Route path="/nft-buyer" element={<NFTBuyerPage />} />
       </Routes>
     </Router>
   );
